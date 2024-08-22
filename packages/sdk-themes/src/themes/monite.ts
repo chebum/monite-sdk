@@ -185,6 +185,15 @@ const typographyDark = Object.assign({}, defaultMoniteTypography, {
 const filterControlWidth = '160px';
 
 export const defaultMoniteComponents: Components<Omit<Theme, 'components'>> = {
+  MoniteOptions: {
+    defaultProps: {
+      dateFormat: {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+      },
+    },
+  },
   MuiTypography: {
     styleOverrides: {
       body2: defaultMoniteTypography.body2, // It's unclear why body2 doesn't pickup from the typography config itself
