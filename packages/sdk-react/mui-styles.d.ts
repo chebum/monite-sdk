@@ -1,9 +1,10 @@
 import { type MoniteApprovalRequestStatusChipProps } from '@/components/approvalRequests/ApprovalRequestsTable/ApprovalRequestStatusChip';
+import { type CounterpartStatusChipProps } from '@/components/counterparts/CounterpartStatusChip';
 import { type PayableStatusChipProps } from '@/components/payables/PayableStatusChip/PayableStatusChip';
-import { InvoiceRecurrenceIterationStatusChipProps } from '@/components/receivables/InvoiceRecurrenceIterationStatusChip/InvoiceRecurrenceIterationStatusChip';
-import { InvoiceRecurrenceStatusChipProps } from '@/components/receivables/InvoiceRecurrenceStatusChip/InvoiceRecurrenceStatusChip';
+import { type InvoiceRecurrenceIterationStatusChipProps } from '@/components/receivables/InvoiceRecurrenceIterationStatusChip/InvoiceRecurrenceIterationStatusChip';
+import { type InvoiceRecurrenceStatusChipProps } from '@/components/receivables/InvoiceRecurrenceStatusChip/InvoiceRecurrenceStatusChip';
 import { type InvoiceStatusChipProps } from '@/components/receivables/InvoiceStatusChip';
-import { MoniteTablePaginationProps } from '@/ui/table/TablePagination';
+import { type MoniteTablePaginationProps } from '@/ui/table/TablePagination';
 import {
   ComponentsOverrides,
   ComponentsPropsList,
@@ -35,6 +36,7 @@ declare module '@mui/material/styles' {
     MoniteTablePagination: 'root' | 'menu';
     MoniteInvoiceRecurrenceStatusChip: 'root';
     MoniteInvoiceRecurrenceIterationStatusChip: 'root';
+    MoniteCounterpartStatusChip: 'root';
   }
 
   /**
@@ -47,6 +49,7 @@ declare module '@mui/material/styles' {
     MoniteTablePagination: Partial<MoniteTablePaginationProps>;
     MoniteInvoiceRecurrenceStatusChip: Partial<InvoiceRecurrenceStatusChipProps>;
     MoniteInvoiceRecurrenceIterationStatusChip: Partial<InvoiceRecurrenceIterationStatusChipProps>;
+    MoniteCounterpartStatusChip: Partial<CounterpartStatusChipProps>;
   }
 
   interface MoniteOptions {
@@ -64,5 +67,6 @@ declare module '@mui/material/styles' {
     MoniteTablePagination?: ComponentType<'MoniteTablePagination'>;
     MoniteInvoiceRecurrenceStatusChip?: ComponentType<'MoniteInvoiceRecurrenceStatusChip'>;
     MoniteInvoiceRecurrenceIterationStatusChip?: ComponentType<'MoniteInvoiceRecurrenceIterationStatusChip'>;
+    MoniteCounterpartStatusChip?: ComponentType<'MoniteCounterpartStatusChip'>;
   }
 }
